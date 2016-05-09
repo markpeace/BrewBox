@@ -5,4 +5,4 @@ http.createServer(function(req,res){
   res.end(page);
 }).listen(80);
 
-var testvar="hi";
+exports.testvar = "mark";
