@@ -1,3 +1,3 @@
 setInterval(function() {
-  console.log('yup');
+  console.log(testvar);
 },500)

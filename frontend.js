@@ -4,3 +4,5 @@ http.createServer(function(req,res){
   res.writeHead(200);
   res.end(page);
 }).listen(80);
+
+var testvar="hi";
