@@ -1,3 +1,3 @@
 setInterval(function() {
-  console.log(testvar);
-},500)
+  coredata.temperature.target +=1;
+},1000)
