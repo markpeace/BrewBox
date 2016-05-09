@@ -1,4 +1,9 @@
-var page= require("https://github.com/markpeace/BrewBox/blob/master/pages/index.html");
+http.get("https://github.com/markpeace/BrewBox/blob/master/pages/index.html", function(res) {
+  res.on('data', function(data) {
+    console.log(data);
+  });
+});
+
 
 var http = require("http");
 
