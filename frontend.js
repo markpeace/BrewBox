@@ -11,5 +11,5 @@ http.get("https://github.com/markpeace/BrewBox/blob/master/pages/index.html", fu
 
 http.createServer(function(req,res){
   res.writeHead(200);
-  res.end(data);
+  res.end(page);
 }).listen(80);
