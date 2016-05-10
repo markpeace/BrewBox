@@ -5,6 +5,7 @@ var page = {}
 
 request_pages.forEach(function(request_page) {
   http.get("https://rawgit.com/markpeace/BrewBox/master/pages/"+request_page+".html", function(res) {
+    page[request_page]=""
     res.on('data', function(data) { page[request_page]+=data })
   })
 })
