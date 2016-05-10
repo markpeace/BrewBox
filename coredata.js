@@ -1,4 +1,5 @@
 exports = {
+  emulation_mode:true,
   temperature: {
     target:50,
     actual:40,
