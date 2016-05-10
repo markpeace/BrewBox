@@ -12,4 +12,5 @@ request_pages.forEach(function(request_page) {
 http.createServer(function(req,res){
   res.writeHead(200);
   res.end(page.index);
+  console.log(page)
 }).listen(80);
