@@ -1,13 +1,17 @@
 var http = require("http");
 
-var page = "";
-var http = require("http");
-http.get("https://rawgit.com/markpeace/BrewBox/master/pages/index.html", function(res) {
-  res.on('data', function(data) {
-    page=page+data
-  });
-  res.on('close', function() { console.log(page) })
-});
+var request_pages = ["index"]
+var page = {}
+
+pages.forEach(function(request_page) {
+  http.get("https://rawgit.com/markpeace/BrewBox/master/pages/"+request_page+".html", function(res) {
+    res.on('data', function(data) { page[request_page]+=data })
+    res.on('close', function() {
+      console.warn(request_page)
+      console.log(page)
+    })
+  })
+})
 
 http.createServer(function(req,res){
   res.writeHead(200);
