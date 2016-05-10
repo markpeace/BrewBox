@@ -11,6 +11,5 @@ http.get("https://rawgit.com/markpeace/BrewBox/master/pages/index.html", functio
 
 http.createServer(function(req,res){
   res.writeHead(200);
-  res.write(coredata.temperature.actual);
-  res.end(coredata.heating_active);
+  res.end(page);
 }).listen(80);
